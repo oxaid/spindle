@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Privacy from "./pages/Privacy"
 import Terms from "./pages/Terms"
 import Careers from "./pages/Carrer"
+import Contact from "./pages/Contact"
 import { Toaster } from "react-hot-toast";
 
 function AnimatedRoutes() {
@@ -43,6 +44,14 @@ function AnimatedRoutes() {
           element={
             <PageLayout noPadding>
               <PageWrapper><Careers /></PageWrapper>
+            </PageLayout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <PageLayout noPadding>
+              <PageWrapper><Contact /></PageWrapper>
             </PageLayout>
           }
         />

@@ -38,7 +38,7 @@ const features = [
 const FeatureSection = () => {
 
   return (
-    <SectionWrapper id="features" className="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-20 py-10 ">
+    <SectionWrapper id="features" className="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-20 py-10">
       <div className="grid md:grid-cols-5 gap-10 items-center md:grid-flow-col md:items-stretch ">
         {/* Left: Text */}
         <div className=" md:col-span-2 bg-white p-10 rounded-3xl border-2 border-[#555555] flex justify-center items-center">
@@ -60,7 +60,7 @@ const FeatureSection = () => {
             key={index}
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 200, damping: 12 }}
-            className="group bg-white border-2 border-[#555555] rounded-[20px] p-5 hover:pt-7 hover:shadow-bottom-card-custom hover:cursor-pointer transition-all duration-300"
+            className="group bg-white border-2 border-[#555555] rounded-[20px] p-5 hover:shadow-bottom-card-custom  hover:cursor-pointer transition-all duration-300"
           >
             <img
               src={feature.icon}

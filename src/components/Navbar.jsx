@@ -2,13 +2,30 @@ import { useState } from 'react';
 import { Menu, X, Github, Send } from 'lucide-react';
 import Logo from "../assets/images/logo.svg"
 import LogoSpindle from "../assets/images/spindle-logo.svg"
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import iconX from "../assets/images/icons/x-nav.svg"
 import iconGithub from "../assets/images/icons/github-nav.svg"
 import iconTelegram from "../assets/images/icons/telegram-nav.svg"
+import { useEffect } from 'react';
 
 const NavbarSpindle = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  // Optional: scroll otomatis setelah redirect ke home
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (isHome && hash) {
+      const target = hash.replace('#', '');
+      setTimeout(() => {
+        const el = document.getElementById(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100); // delay dikit biar DOM ready
+    }
+  }, [isHome]);
 
   return (
     <nav className="max-w-6xl mx-auto w-full px-6 md:px-10 lg:px-20 py-4 relative z-50">
@@ -30,48 +47,40 @@ const NavbarSpindle = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex justify-center flex-1 space-x-7 text-sm lg:text-base text-[#313131]">
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:underline"
-          >
-            Home
-          </Link>
-          <Link
-            to="how-it-works"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:underline"
-          >
-            How it works
-          </Link>
-          <Link
-            to="use-cases"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:underline"
-          >
-            Use cases
-          </Link>
-          <Link
-            to="vision"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:underline"
-          >
-            Vision
-          </Link>
+          {isHome ? (
+            <>
+              <ScrollLink to="how-it-works" smooth={true} duration={500} className="cursor-pointer hover:underline">How it works</ScrollLink>
+              <ScrollLink to="use-cases" smooth={true} duration={500} className="cursor-pointer hover:underline">Use cases</ScrollLink>
+              <ScrollLink to="vision" smooth={true} duration={500} className="cursor-pointer hover:underline">Vision</ScrollLink>
+
+            </>
+          ) : (
+            <>
+              <RouterLink to="/#how-it-works" className="cursor-pointer hover:underline">How it works</RouterLink>
+              <RouterLink to="/#use-cases" className="cursor-pointer hover:underline">Use cases</RouterLink>
+              <RouterLink to="/#vision" className="cursor-pointer hover:underline">Vision</RouterLink>
+
+            </>
+          )}
+          <RouterLink to="/contact" className="cursor-pointer hover:underline">Contact</RouterLink>
         </div>
 
 
         {/* CTA + Social - Desktop */}
         <div className="hidden lg:flex items-center space-x-3">
-          <button className="bg-[#F06434] text-white px-4 py-2 rounded-full hover:bg-[#d6532b] transition border-2 border-[#555555] font-semibold">
-            <Link to="earlyAccess" smooth={true} duration={700}>
+          {isHome ? (
+            <ScrollLink to="earlyAccess" smooth={true} duration={700}>
+              <button className="bg-seccondary  text-white px-4 py-2 rounded-full hover:bg-[#d6532b] transition border-2 border-[#555555] font-semibold">
                 Get early access
-            </Link>
-          </button>
+              </button>
+            </ScrollLink>
+          ) : (
+            <RouterLink to="/#earlyAccess">
+              <button className="bg-seccondary text-white px-4 py-2 rounded-full hover:bg-[#d6532b] transition border-2 border-[#555555] font-semibold">
+                Get early access
+              </button>
+            </RouterLink>
+          )}
           <a
             href="https://your-x-link.com"
             target="_blank"
@@ -115,43 +124,30 @@ const NavbarSpindle = () => {
       {/* Mobile Dropdown Menu */}
        {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-[#EDEBE7] shadow-md px-6 py-4 flex flex-col space-y-4 lg:hidden rounded-b-xl border-t border-gray-200">
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:underline"
-          >
-            Home
-          </Link>
-          <Link
-            to="how-it-works"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:underline"
-          >
-            How it works
-          </Link>
-          <Link
-            to="use-cases"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:underline"
-          >
-            Use cases
-          </Link>
-          <Link
-            to="vision"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:underline"
-          >
-            Vision
-          </Link>
-          <button className="bg-[#F06434] text-white px-4 py-2 rounded-full hover:bg-[#d6532b] transition border border-[#555555]">
-            <Link to="earlyAccess" smooth={true} duration={700}>
-                Get early access
-            </Link>
-          </button>
+          {isHome ? (
+            <>
+              <ScrollLink to="how-it-works" smooth={true} duration={500} className="cursor-pointer hover:underline">How it works</ScrollLink>
+              <ScrollLink to="use-cases" smooth={true} duration={500} className="cursor-pointer hover:underline">Use cases</ScrollLink>
+              <ScrollLink to="vision" smooth={true} duration={500} className="cursor-pointer hover:underline">Vision</ScrollLink>
+              <ScrollLink to="earlyAccess" smooth={true} duration={500}>
+                <button className="bg-[#F06434] text-white px-4 py-2 rounded-full hover:bg-[#d6532b] transition border border-[#555555] w-full">
+                  Get early access
+                </button>
+              </ScrollLink>
+            </>
+          ) : (
+            <>
+              <RouterLink to="/#how-it-works" className="cursor-pointer hover:underline">How it works</RouterLink>
+              <RouterLink to="/#use-cases" className="cursor-pointer hover:underline">Use cases</RouterLink>
+              <RouterLink to="/#vision" className="cursor-pointer hover:underline">Vision</RouterLink>
+              <RouterLink to="/#earlyAccess">
+                <button className="bg-[#F06434] text-white px-4 py-2 rounded-full hover:bg-[#d6532b] transition border border-[#555555] w-full">
+                  Get early access
+                </button>
+              </RouterLink>
+            </>
+          )}
+
           {/* Social Icons - Mobile Only */}
           <div className="flex justify-center space-x-3 pt-2 md:hidden">
             <a

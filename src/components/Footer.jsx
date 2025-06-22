@@ -12,7 +12,7 @@ const FooterSection = () => {
   };
 
   return (
-    <footer className="relative mt-20 mx-6 md:mx-28 border-2 border-[#313131] bg-seccondary text-white rounded-[118px] px-6 md:px-16 py-4 bottom-5">
+    <footer className="relative mt-20 mx-6 md:mx-28 border-2 border-[#313131] bg-seccondary text-white rounded-[118px] px-6 md:px-16 py-6 bottom-5">
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
@@ -38,7 +38,7 @@ const FooterSection = () => {
             <span className="font-bold text-lg md:text-xl lg:text-2xl">Spindle</span>
           </a>
           {/* Social Icons */}
-          <div className="flex gap-3 mt-4 text-lg">
+          <div className="flex gap-3 mt-2 text-lg">
             <a
               href="https://x.com/spindle"
               target="_blank"

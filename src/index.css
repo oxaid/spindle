@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* reset style dasar */
+
+@layer base {
+  body {
+    @apply bg-[#EDEBE7] text-[#313131] antialiased;
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+/* hides scrollbar in all browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 255, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(255, 255, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 255, 0, 0.5);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite ease-in-out;
+}

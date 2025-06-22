@@ -1,0 +1,191 @@
+import { useState } from 'react';
+import { Menu, X, Github, Send } from 'lucide-react';
+import Logo from "../assets/images/logo.svg"
+import LogoSpindle from "../assets/images/spindle-logo.svg"
+import { Link } from "react-scroll";
+import iconX from "../assets/images/icons/x-nav.svg"
+import iconGithub from "../assets/images/icons/github-nav.svg"
+import iconTelegram from "../assets/images/icons/telegram-nav.svg"
+
+const NavbarSpindle = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <nav className="max-w-6xl mx-auto w-full px-6 md:px-10 lg:px-20 py-4 relative z-50">
+      <div className="flex justify-between bg-white items-center rounded-full border-2 border-[#555555] px-4 py-2 flex-wrap md:flex-nowrap backdrop-blur-md">
+        {/* Logo */}
+        <a href='/' className="flex items-center space-x-2">
+          <img
+            src={Logo}
+            alt="Spindle Logo Icon"
+            className="w-9 h-9"
+          />
+          <img
+            src={LogoSpindle}
+            alt="Spindle Logo Icon"
+            className="w-16 h-10"
+          />
+          {/* <span className="font-bold text-base md:text-lg">Spindle</span> */}
+        </a>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex justify-center flex-1 space-x-7 text-sm lg:text-base text-[#313131]">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:underline"
+          >
+            Home
+          </Link>
+          <Link
+            to="how-it-works"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:underline"
+          >
+            How it works
+          </Link>
+          <Link
+            to="use-cases"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:underline"
+          >
+            Use cases
+          </Link>
+          <Link
+            to="vision"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:underline"
+          >
+            Vision
+          </Link>
+        </div>
+
+
+        {/* CTA + Social - Desktop */}
+        <div className="hidden lg:flex items-center space-x-3">
+          <button className="bg-[#F06434] text-white px-4 py-2 rounded-full hover:bg-[#d6532b] transition border-2 border-[#555555] font-semibold">
+            <Link to="earlyAccess" smooth={true} duration={700}>
+                Get early access
+            </Link>
+          </button>
+          <a
+            href="https://your-x-link.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
+          >
+            <img src={iconX} alt="X" className="w-4 h-4" />
+          </a>
+
+          <a
+            href="https://github.com/your-project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
+          >
+            <img src={iconGithub} alt="GitHub" className="w-4 h-4" />
+          </a>
+
+          <a
+            href="https://t.me/your-channel"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
+          >
+            <img src={iconTelegram} alt="Telegram" className="w-4 h-4" />
+          </a>
+
+        </div>
+
+        {/* Hamburger Button - Mobile */}
+        <div className="lg:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-2xl p-2 rounded hover:bg-gray-200 transition"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+       {isMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-[#EDEBE7] shadow-md px-6 py-4 flex flex-col space-y-4 lg:hidden rounded-b-xl border-t border-gray-200">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:underline"
+          >
+            Home
+          </Link>
+          <Link
+            to="how-it-works"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:underline"
+          >
+            How it works
+          </Link>
+          <Link
+            to="use-cases"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:underline"
+          >
+            Use cases
+          </Link>
+          <Link
+            to="vision"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:underline"
+          >
+            Vision
+          </Link>
+          <button className="bg-[#F06434] text-white px-4 py-2 rounded-full hover:bg-[#d6532b] transition border border-[#555555]">
+            <Link to="earlyAccess" smooth={true} duration={700}>
+                Get early access
+            </Link>
+          </button>
+          {/* Social Icons - Mobile Only */}
+          <div className="flex justify-center space-x-3 pt-2 md:hidden">
+            <a
+            href="https://your-x-link.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
+          >
+            <img src={iconX} alt="X" className="w-4 h-4" />
+            </a>
+
+            <a
+              href="https://github.com/your-project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
+            >
+              <img src={iconGithub} alt="GitHub" className="w-4 h-4" />
+            </a>
+
+            <a
+              href="https://t.me/your-channel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
+            >
+              <img src={iconTelegram} alt="Telegram" className="w-4 h-4" />
+            </a>
+
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default NavbarSpindle;

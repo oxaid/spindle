@@ -1,0 +1,61 @@
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
+import PageWrapper from "./components/PageWrapper"
+import PageLayout from "./components/PageLayout"
+import Home from "./pages/Home"
+import Privacy from "./pages/Privacy"
+import Terms from "./pages/Terms"
+import Careers from "./pages/Carrer"
+import { Toaster } from "react-hot-toast";
+
+function AnimatedRoutes() {
+  const location = useLocation()
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <PageLayout noPadding>
+              <PageWrapper><Home /></PageWrapper>
+            </PageLayout>
+          }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <PageLayout noPadding>
+              <PageWrapper><Privacy /></PageWrapper>
+            </PageLayout>
+          }
+        />
+        <Route
+          path="/terms-of-service"
+          element={
+            <PageLayout noPadding>
+              <PageWrapper><Terms /></PageWrapper>
+            </PageLayout>
+          }
+        />
+        <Route
+          path="/careers"
+          element={
+            <PageLayout noPadding>
+              <PageWrapper><Careers /></PageWrapper>
+            </PageLayout>
+          }
+        />
+      </Routes>
+    </AnimatePresence>
+  )
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Toaster position="top-center" reverseOrder={false} />
+      <AnimatedRoutes />
+    </Router>
+  )
+}

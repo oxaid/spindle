@@ -18,12 +18,12 @@ const FormSection = () => {
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
     if (!name || !email) {
-      alert('Please fill out both fields.');
+      toast.error("Please fill all required fields");
       return;
     }
 
     if (!emailValid) {
-      alert('Please enter a valid email address.');
+      toast.error("Please fill all required fields");
       return;
     }
 

@@ -84,7 +84,7 @@ const FormSection = () => {
           onChange={handleChange}
           className="w-full border-b-2 border-[#555555] outline-none py-2 text-sm md:text-base placeholder:text-[#8F8F8F] placeholder"
         />
-        <p className="text-xs text-[#8F8F8F] mt-3 mb-3 font-extralight">
+        <p className="text-xs text-[#8F8F8F] mt-3 mb-3 font-light">
           By signing up, you agree to Spindle’s <span className='font-bold'>Terms of Service</span> and <span className='font-bold'>Privacy Policy.</span>
         </p>
         <button

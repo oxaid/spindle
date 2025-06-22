@@ -12,7 +12,7 @@ const FooterSection = () => {
   };
 
   return (
-    <footer className="relative mt-20 mx-6 md:mx-28 border-2 border-[#313131] bg-seccondary text-white rounded-[118px] px-6 md:px-16 py-6 bottom-5">
+    <footer className="relative mt-20 mx-6 md:mx-28 border-2 border-[#313131] bg-seccondary text-white rounded-[118px] px-6 md:px-16 py-8 bottom-5">
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
@@ -66,7 +66,7 @@ const FooterSection = () => {
 
         {/* Right Column */}
         <div className="text-center md:text-right">
-          <div className="flex justify-center md:justify-end gap-2 text-sm text-white/90 mb-4">
+          <div className="flex justify-center md:justify-end gap-2 text-sm text-white/90 mb-2 md:mb-4">
             <a href="/privacy-policy" className="hover:underline transition">Privacy Policy |</a>
             <a href="/terms-of-service" className="hover:underline transition">Terms of Service |</a>
             <a href="/careers" className="hover:underline transition">Careers</a>

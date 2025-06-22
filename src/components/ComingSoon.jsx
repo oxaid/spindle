@@ -19,7 +19,7 @@ const LiveDemoSection = () => {
   return (
     <section className="px-12 md:px-10 lg:px-20 py-12 md:py-16 flex flex-col items-center justify-center">
       {/* Title */}
-      <h2 className="text-center text-3xl md:text-4xl xl:text-[48px] font-semibold mb-10 text-[#313131]">Live demo</h2>
+      <h2 className="text-center text-3xl md:text-4xl xl:text-[48px] font-semibold mb-16 text-[#313131]">Live demo</h2>
 
       {/* Card with click-shake animation */}
       <motion.div

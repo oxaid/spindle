@@ -61,7 +61,7 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-seccondary border-2 border-[#555555] text-white px-5 py-2 rounded-full hover:bg-[#d6532b] transition"
+              className="bg-seccondary text-sm md:text-base border-2 border-[#555555] text-white px-5 py-2 rounded-full hover:bg-[#d6532b] transition"
             >
               Get early access
             </motion.button>
@@ -70,7 +70,7 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="text-[#8F8F8F] border-2 border-[#8F8F8F] px-5 py-2 rounded-full hover:bg-gray-100 transition"
+              className="text-[#8F8F8F] text-sm md:text-base border-2 border-[#8F8F8F] px-5 py-2 rounded-full hover:bg-gray-100 transition"
             >
               See how it works
             </motion.button>

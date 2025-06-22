@@ -32,7 +32,7 @@ const ContactPage = () => {
               Connect <span className="text-seccondary font-bold">with us</span>
             </h2>
           </div>
-          <div className="mt-10">
+          <div className="mt-5 px-1">
             <h3 className="text-lg lg:text-xl text-[#555555] font-semibold mb-3 text-bold">Socials</h3>
             <div className="flex items-center gap-3">
               <a

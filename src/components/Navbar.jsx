@@ -129,6 +129,7 @@ const NavbarSpindle = () => {
               <ScrollLink to="how-it-works" smooth={true} duration={500} className="cursor-pointer hover:underline">How it works</ScrollLink>
               <ScrollLink to="use-cases" smooth={true} duration={500} className="cursor-pointer hover:underline">Use cases</ScrollLink>
               <ScrollLink to="vision" smooth={true} duration={500} className="cursor-pointer hover:underline">Vision</ScrollLink>
+              <RouterLink to="/contact" className="cursor-pointer hover:underline">Contact</RouterLink>
               <ScrollLink to="earlyAccess" smooth={true} duration={500}>
                 <button className="bg-[#F06434] text-white px-4 py-2 rounded-full hover:bg-[#d6532b] transition border border-[#555555] w-full">
                   Get early access
@@ -140,6 +141,7 @@ const NavbarSpindle = () => {
               <RouterLink to="/#how-it-works" className="cursor-pointer hover:underline">How it works</RouterLink>
               <RouterLink to="/#use-cases" className="cursor-pointer hover:underline">Use cases</RouterLink>
               <RouterLink to="/#vision" className="cursor-pointer hover:underline">Vision</RouterLink>
+              <RouterLink to="/contact" className="cursor-pointer hover:underline">Contact</RouterLink>
               <RouterLink to="/#earlyAccess">
                 <button className="bg-[#F06434] text-white px-4 py-2 rounded-full hover:bg-[#d6532b] transition border border-[#555555] w-full">
                   Get early access
@@ -147,6 +149,7 @@ const NavbarSpindle = () => {
               </RouterLink>
             </>
           )}
+
 
           {/* Social Icons - Mobile Only */}
           <div className="flex justify-center space-x-3 pt-2 md:hidden">

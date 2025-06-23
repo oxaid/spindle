@@ -40,7 +40,7 @@ const FooterSection = () => {
           {/* Social Icons */}
           <div className="flex gap-3 mt-2 text-lg">
             <a
-              href="https://x.com/spindle"
+              href="https://x.com/StudioSpindle"
               target="_blank"
               rel="noopener noreferrer"
               className="w-7 h-7 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#F06434] transition"
@@ -48,7 +48,7 @@ const FooterSection = () => {
               <img src={iconX} alt="X" className="w-4 h-4" />
             </a>
             <a
-              href="https://spindle.ai/docs"
+              href="https://github.com/tm-0430/spindle"
               target="_blank"
               rel="noopener noreferrer"
               className="w-7 h-7 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#F06434] transition"
@@ -56,7 +56,7 @@ const FooterSection = () => {
               <img src={iconGithub} alt="X" className="w-4 h-4" />
             </a>
             <a
-              href="mailto:hello@spindle.ai"
+              href=""
               className="w-7 h-7 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#F06434] transition"
             >
               <img src={iconTelegram} alt="X" className="w-4 h-4" />

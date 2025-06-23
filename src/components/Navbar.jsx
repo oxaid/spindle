@@ -82,7 +82,7 @@ const NavbarSpindle = () => {
             </RouterLink>
           )}
           <a
-            href="https://your-x-link.com"
+            href="https://x.com/StudioSpindle"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
@@ -91,7 +91,7 @@ const NavbarSpindle = () => {
           </a>
 
           <a
-            href="https://github.com/your-project"
+            href="https://github.com/tm-0430/spindle"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
@@ -100,7 +100,7 @@ const NavbarSpindle = () => {
           </a>
 
           <a
-            href="https://t.me/your-channel"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
@@ -154,7 +154,7 @@ const NavbarSpindle = () => {
           {/* Social Icons - Mobile Only */}
           <div className="flex justify-center space-x-3 pt-2 md:hidden">
             <a
-            href="https://your-x-link.com"
+            href="https://x.com/StudioSpindle"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
@@ -163,7 +163,7 @@ const NavbarSpindle = () => {
             </a>
 
             <a
-              href="https://github.com/your-project"
+              href="https://github.com/tm-0430/spindle"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
@@ -172,7 +172,7 @@ const NavbarSpindle = () => {
             </a>
 
             <a
-              href="https://t.me/your-channel"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 border-2 border-[#555555] rounded-full hover:bg-gray-100 transition-colors"

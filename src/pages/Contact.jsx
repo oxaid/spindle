@@ -36,7 +36,7 @@ const ContactPage = () => {
             <h3 className="text-lg lg:text-xl text-[#555555] font-semibold mb-3 text-bold">Socials</h3>
             <div className="flex items-center gap-3">
               <a
-                href="https://your-x-link.com"
+                href="https://x.com/StudioSpindle"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 border border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
@@ -45,7 +45,7 @@ const ContactPage = () => {
               </a>
 
               <a
-                href="https://github.com/your-project"
+                href="https://github.com/tm-0430/spindle"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 border border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
@@ -54,7 +54,7 @@ const ContactPage = () => {
               </a>
 
               <a
-                href="https://t.me/your-channel"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 border border-[#555555] rounded-full hover:bg-gray-100 transition-colors"
